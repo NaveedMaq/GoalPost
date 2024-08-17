@@ -2,15 +2,16 @@ import { useState } from 'react';
 import { Button, StyleSheet, TextInput, View } from 'react-native';
 
 export const GoalInput = (props) => {
-  const [entertedGoalText, setEntertedGoalText] = useState('');
+  const [enteredGoalText, setEnteredGoalText] = useState('');
 
   function addGoalHandler() {
-    props.onAddGoal(entertedGoalText);
-    setEntertedGoalText('');
+    if (!enteredGoalText.trim()) return;
+    props.onAddGoal(enteredGoalText);
+    setEnteredGoalText('');
   }
 
   function goalInputHandler(enteredText) {
-    setEntertedGoalText(enteredText);
+    setEnteredGoalText(enteredText);
   }
 
   return (
@@ -19,7 +20,7 @@ export const GoalInput = (props) => {
         style={styles.textInput}
         placeholder="What's your goal?"
         onChangeText={goalInputHandler}
-        value={entertedGoalText}
+        value={enteredGoalText}
       />
       <Button color="#5e0acc" onPress={addGoalHandler} title="Add Goal" />
     </View>

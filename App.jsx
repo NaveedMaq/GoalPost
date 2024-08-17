@@ -14,10 +14,14 @@ export default function App() {
     ]);
   }
 
+  function deleteGoalHandler(goalId) {
+    setAllGoals((goals) => [...goals.filter((g) => g.id !== goalId)]);
+  }
+
   return (
     <View style={styles.appContainer}>
       <GoalInput onAddGoal={addGoalHandler} />
-      <GoalList allGoals={allGoals} />
+      <GoalList allGoals={allGoals} onDeleteItem={deleteGoalHandler} />
     </View>
   );
 }

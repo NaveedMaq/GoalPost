@@ -9,7 +9,13 @@ export const GoalList = (props) => {
         alwaysBounceVertical={false}
         data={props.allGoals}
         keyExtractor={(item) => item.id}
-        renderItem={(itemData) => <GoalItem text={itemData.item.text} />}
+        renderItem={(itemData) => (
+          <GoalItem
+            text={itemData.item.text}
+            id={itemData.item.id}
+            onDeleteItem={props.onDeleteItem}
+          />
+        )}
       />
     </View>
   );
