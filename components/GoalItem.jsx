@@ -4,7 +4,7 @@ export const GoalItem = (props) => {
   function onDeleteItem(id) {
     setTimeout(() => {
       props.onDeleteItem(id);
-    }, 500);
+    }, 200);
   }
 
   return (
