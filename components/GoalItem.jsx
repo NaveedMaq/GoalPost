@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
   },
 
   goalText: {
-    padding: 8,
+    padding: 12,
+    fontSize: 16,
     color: '#fff',
   },
 });
