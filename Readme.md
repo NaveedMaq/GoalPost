@@ -16,13 +16,13 @@ This is a React Native project for managing goals. The app allows users to add, 
 1. Clone the repository:
 
 ```sh
-git clone https://github.com/yourusername/rncourse.git
+git clone https://github.com/NaveedMaq/GoalPost.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-cd rncourse
+cd GoalPost
 ```
 
 3. Install the dependencies:
