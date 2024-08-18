@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 16,
     backgroundColor: '#311b6b',
-    paddingBottom: 64,
+    paddingBottom: 180,
   },
 
   textInput: {
